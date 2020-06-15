@@ -1,6 +1,3 @@
-include(Concerns::AuthHelper)
-helper_method(:current_user)
-
 class Web::DevelopersController < Web::ApplicationController
   def new
     @developer = Developer.new
