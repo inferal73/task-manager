@@ -17,7 +17,8 @@ FactoryBot.define do
   end
 
   sequence :expired_at do |n|
-    (rand(n)+1).from_now
+    today = Date.today
+    today + 3
   end
 
 end
