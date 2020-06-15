@@ -15,9 +15,8 @@ FactoryBot.define do
     "description#{n}"
   end
 
-  sequence :expired_at do |n|
+  sequence :expired_at do |_n|
     today = Date.today
     today + 3
   end
-
 end

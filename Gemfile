@@ -28,7 +28,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'state_machines-activerecord'
 
-gem "slim-rails"
+gem 'slim-rails'
 
 gem 'simple_form'
 
