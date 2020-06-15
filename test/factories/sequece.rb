@@ -17,6 +17,7 @@ FactoryBot.define do
   end
 
   sequence :expired_at do |n|
-    "expired_at#{n}"
+    (rand(n)+1).from_now
   end
+
 end
