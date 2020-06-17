@@ -11,4 +11,14 @@ FactoryBot.define do
   sequence :email do |n|
     "person#{n}@example.com"
   end
+
+  sequence :description do |n|
+    "description#{n}"
+  end
+
+  sequence :expired_at do |n|
+    today = Date.today
+    today + 3
+  end
+
 end
