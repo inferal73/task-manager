@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_063523) do
     t.date "expired_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["state"], name: "index_tasks_on_state"
   end
 
   create_table "users", force: :cascade do |t|
