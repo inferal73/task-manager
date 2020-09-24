@@ -7,7 +7,9 @@ class Web::DevelopersControllerTest < ActionController::TestCase
   end
 
   test 'should post create' do
-    post :create, params: { developer: attributes_for(:developer) }
+    assert_difference 'Developer.count' do
+      post :create, params: { developer: attributes_for(:developer) }
+    end
     assert_response :redirect
   end
 end
