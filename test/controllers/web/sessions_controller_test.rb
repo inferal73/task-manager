@@ -13,7 +13,7 @@ class Web::SessionsControllerTest < ActionController::TestCase
       email: user.email,
       password: password,
     }
-    assert_difference 'Session.count' do
+    assert_difference 'session.count' do
       post :create, params: { session_form: attrs }
     end
     assert_response :redirect
