@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :task do
-    name { generate :string }
-    description { generate :string }
+    name
+    description
     expired_at
 
     association :author, factory: :manager
