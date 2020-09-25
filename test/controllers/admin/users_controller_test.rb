@@ -47,4 +47,11 @@ class Admin::UsersControllerTest < ActionController::TestCase
     assert patched_user[:email] == user_attrs[:email]
     assert patched_user.authenticate(user_attrs[:password]) == patched_user
   end
+
+  test "should delete destroy" do
+    user = create(:user)
+    delete :destroy, params: {id: user.id }
+    assert_not User.exists?(user.id)
+    assert_response :redirect
+  end
 end
