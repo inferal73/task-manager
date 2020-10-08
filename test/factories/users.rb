@@ -3,8 +3,8 @@ FactoryBot.define do
     first_name
     last_name
     password
-    email
     avatar
+    email
 
     factory :developer do
       type { "Developer" }
